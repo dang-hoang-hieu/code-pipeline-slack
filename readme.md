@@ -55,3 +55,7 @@ Policies:
 ```
 
 So we can retrieve information about all pipelines and builds.  See [template.yml](https://github.com/ogrodnek/code-pipeline-slack/blob/master/template.yml) for more detail.
+
+### Updated
+- the channel variable is not reflected from the CF, you have to manually add it to generted Lambda's parameters.
+- Update the template.yml's CodeUri before you submit creating the CF
