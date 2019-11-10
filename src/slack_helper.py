@@ -25,11 +25,11 @@ def find_channel(name):
         if ch['name'] == name:
           CHANNEL_CACHE[name] = ch['id']
           return ch['id']
-  
+
   return None
 
 def find_msg(ch):
-  return sc.api_call('channels.history', channel=ch)  
+  return sc.api_call('channels.history', channel=ch)
 
 def find_my_messages(ch_name, user_name=SLACK_BOT_NAME):
   ch_id = find_channel(ch_name)
@@ -73,7 +73,7 @@ def post_build_msg(msgBuilder):
       r['message']['ts'] = r['ts']
       MSG_CACHE[msgBuilder.buildInfo.executionId] = r['message']
     return r
-  
+
   r = send_msg(SLACK_CHANNEL, msgBuilder.message())
   if r['ok']:
     # TODO: are we caching this ID?
