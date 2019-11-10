@@ -1,4 +1,5 @@
-Code Pipeline Slack Bot
+
+Forked `Code Pipeline Slack Bot` & updated the process at the bottom of this docs
 =======================
 
 This bot will notify you of CodePipeline progress (using [CloudWatch Events](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/WhatIsCloudWatchEvents.html)).
