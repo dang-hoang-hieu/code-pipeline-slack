@@ -31,7 +31,9 @@ Resources:
       Runtime: python2.7
       Timeout: 30
       MemorySize: 256
-      CodeUri: ./target/pkg/lambda.zip
+      CodeUri:
+        Bucket: "bucket name"
+        Key: "path to your zip file"
       Handler: notifier.run
       ReservedConcurrentExecutions: 1
       Environment:
